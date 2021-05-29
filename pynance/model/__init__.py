@@ -10,7 +10,7 @@ class TimeInterval:
         m = re.match(r'(?P<value>\d+)(?P<unit>\w+)', s)
         if m:
             d = m.groupdict()
-            return TimeInterval(int(d['value']), TimeIntervalUnit[d['unit']])
+            return TimeInterval(int(d['value']), TimeIntervalUnit.fromValue(d['unit']))
 
     @classmethod
     def allowedIntervals(cls):
@@ -25,7 +25,7 @@ class TimeInterval:
             raise Exception(f"Interval not in allowed list: {self.allowedIntervals()}")
 
     def __str__(self):
-        return f"{self.value}{self.unit.name}"
+        return f"{self.value}{self.unit.value}"
 
     def __eq__(self, other):
         return self.unit == other.unit and self.value == other.value

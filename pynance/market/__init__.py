@@ -10,7 +10,8 @@ from pynance.model.metadata import CandlestickMetadata
 
 Timestamp = int
 
-def klines(symbol: str, interval: TimeInterval, startTime: Timestamp = None, endTime: Timestamp = None, limit = 500):
+def klines(symbol: str, interval: TimeInterval, startTime: Timestamp = None, endTime: Timestamp = None, limit = 500)\
+        -> pd.DataFrame:
     assert(limit <= 1000)
     path = 'klines'
     params = {
@@ -24,3 +25,4 @@ def klines(symbol: str, interval: TimeInterval, startTime: Timestamp = None, end
     df = CandlestickMetadata.dataFrame(data)
     df = df.set_index(pd.to_datetime(df['Close time'], unit='ms'))
     return df
+
