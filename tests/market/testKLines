@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      User-Agent:
+      - python-requests/2.25.1
+      X-MBX-APIKEY:
+      - 8uMjLX6MqpQkHlHTumLdIfQIO27bXj8OkdE8IwB2aMcAHauCFLh1HzyygL9ShpUZ
+    method: GET
+    uri: https://testnet.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1m&endTime=1622242439999&limit=1
+  response:
+    body:
+      string: '[[1622242380000,"34897.22000000","35268.02000000","33599.68000000","34866.17000000","0.54218800",1622242439999,"18915.19661805",48,"0.37650100","13134.85023937","0"]]'
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '166'
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 29 May 2021 07:22:49 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      Via:
+      - 1.1 f524a7fd984e15aeceb1c8903b4e45c2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 5rP2EsDiLkbHN7R3pMIuiJOdXewJ1fiw2kvQ-XFUqRevR3cpvSsJtA==
+      X-Amz-Cf-Pop:
+      - SIN52-C2
+      X-Cache:
+      - Miss from cloudfront
+      X-Content-Security-Policy:
+      - default-src 'self'
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-WebKit-CSP:
+      - default-src 'self'
+      X-Xss-Protection:
+      - 1; mode=block
+      x-mbx-used-weight:
+      - '1'
+      x-mbx-used-weight-1m:
+      - '1'
+      x-mbx-uuid:
+      - 1ee2f4cb-8b92-4b63-b726-7de62ac6522d
+    status:
+      code: 200
+      message: OK
+version: 1
