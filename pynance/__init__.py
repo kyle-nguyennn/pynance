@@ -34,7 +34,7 @@ def Session():
         session.close()
 
 # used for sending request requires the signature
-def send_signed_request(http_method, url_path, payload={}):
+def send_signed_request(http_method: str, url_path: str, payload={}):
     query_string = urlencode(payload, True)
     if query_string:
         query_string = f"{query_string}&timestamp={get_timestamp()}"
